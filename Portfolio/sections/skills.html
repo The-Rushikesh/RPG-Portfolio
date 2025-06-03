@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills Section</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Cinzel', 'Times New Roman', serif;
+      background-color: #1e1e1e;
+      color: #eee;
+      margin: 0;
+      padding: 1rem;
+    }
+    .project-category {
+      border: 1px solid #444;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+    }
+    .project-category h3 {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.25rem;
+      color: #d4af37; /* Updated color for skills headers */
+    }
+    .category-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1rem;
+      background-color: #222;
+    }
+    .project-category.active .category-content {
+      max-height: 2000px;
+      padding: 1rem;
+    }
+    .project-item {
+      border-top: 1px solid #444;
+      padding: 0.5rem 0;
+    }
+    .project-header {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #f0a500;
+    }
+    .project-description {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-left: 1rem;
+      color: #e0c9a6;
+    }
+    .project-item.active .project-description {
+      max-height: 500px;
+      padding-top: 0.5rem;
+    }
+    .project-header i {
+      transition: transform 0.3s ease;
+    }
+    .project-item.active .project-header i {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <section class="rpg-section">
+    <div class="skills-tree">
+      <div class="project-category">
+        <h3>Programming & Development <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">C & Python (Basic) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Familiar with core programming concepts and logic building using C and Python, applied in hands-on academic and personal projects.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Arduino & Embedded Systems <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Able to build and program microcontroller-based circuits for real-world applications like obstacle detection and automation.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Android Studio (XML & UI Prototyping) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Experience in designing app interfaces and building functional prototypes using XML within Android Studio.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Git & GitHub <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Comfortable using version control to manage projects, track progress, and collaborate effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-category">
+        <h3>Web Technologies <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">HTML5 & CSS3 <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Proficient in creating responsive and structured web pages with clean and modern layouts.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Responsive Design <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Skilled in ensuring websites adapt smoothly to different screen sizes using Flexbox, Grid, and media queries.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">JavaScript (Learning) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Currently learning how to add interactivity and dynamic behavior to web pages using JavaScript.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-category">
+        <h3>Tools & Platforms <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">Android Studio <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Used for mobile app development and interface testing within the Android ecosystem.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">TinkerCAD & Fritzing <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Utilized for electronic circuit design and simulation during hardware project planning.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Figma <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Used to design clean and user-friendly UI mockups and visualize app structures before development.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Moodle, OneCompiler <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Experienced in using online platforms for coding, submissions, and academic coursework.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-category">
+        <h3>Soft Skills <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">Creative Thinking <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Enjoy brainstorming innovative solutions and approaching problems from new perspectives.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Team Collaboration <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Work well in group settings, sharing ideas and contributing to successful project outcomes.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Documentation <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Capable of preparing concise and clear reports, presentations, and technical documentation.</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Self-Learning <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Quick to pick up new tools and concepts independently, with a continuous learning mindset.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="projects-accordion.js"></script>
+</body>
+</html>

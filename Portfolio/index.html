@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rushikesh Chavhan | Electronics & AR Specialist Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <style>
+    .social-icon {
+      font-size: 2rem; /* Increase icon size */
+      margin: 0 10px; /* Add some spacing between icons */
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column; /* Stack fields vertically */
+      gap: 10px; /* Add space between fields */
+      background-color: #2a2a2a; /* RPG style background */
+      padding: 20px; /* Add padding */
+      border-radius: 5px; /* Rounded corners */
+      border: 1px solid #444; /* Border to match RPG style */
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px; /* Padding for input fields */
+      border: 1px solid #444; /* Border to match RPG style */
+      border-radius: 5px; /* Rounded corners */
+      background-color: #1e1e1e; /* Dark background for input fields */
+      color: #eee; /* Light text color */
+    }
+    .contact-form input[type="submit"] {
+      background-color: #d4af37; /* Button color */
+      color: #1a1a1a; /* Button text color */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor */
+      padding: 10px 15px; /* Padding for button */
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s; /* Transition for hover effect */
+      width: auto; /* Set width to auto for a shorter button */
+    }
+    .contact-form input[type="submit"]:hover {
+      background-color: #b89a2a; /* Darker button color on hover */
+    }
+    .character-portrait img {
+      width: 100px; /* Set width for the character image */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 50%; /* Make it circular */
+    }
+  </style>
+</head>
+<body>
+  <div class="rpg-container" style="display: flex;">
+    <!-- Character Panel -->
+    <aside class="character-panel">
+      <div class="character-portrait">
+        <img src="assets/my photo.jpg" alt="Rushikesh's Character">
+        <div class="health-bar">
+          <div class="health-fill" style="width: 100%"></div>
+        </div>
+      </div>
+      
+      <div class="character-stats">
+        <h2>Rushikesh Chavhan</h2>
+        <p class="character-class"><strong>Core Attributes</strong></p>
+        
+        <ul>
+          <li><strong>Analytical Reasoning</strong></li>
+          <li><strong>Creative Design</strong></li>
+          <li><strong>Hands-On Engineering</strong></li>
+          <li><strong>Collaborative Workflow</strong></li>
+        </ul>
+      </div>
+      
+      <div class="inventory">
+        <h3>Equipment</h3>
+        <ul>
+          <li><i class="fas fa-laptop"></i> <strong>Coding Laptop</strong></li>
+          <li><i class="fas fa-microchip"></i> <strong>Arduino Kit</strong></li>
+          <li><i class="fas fa-vr-cardboard"></i> <strong>AR Headset</strong></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+      <nav class="rpg-tabs">
+        <button class="tab-btn active" data-tab="profile">
+          <i class="fas fa-user"></i> About Me
+        </button>
+        <button class="tab-btn" data-tab="stats">
+          <i class="fas fa-chart-bar"></i> Stats
+        </button>
+        <button class="tab-btn" data-tab="skills">
+          <i class="fas fa-scroll"></i> Skills
+        </button>
+        <button class="tab-btn" data-tab="projects">
+          <i class="fas fa-briefcase"></i> Projects
+        </button>
+        <button class="tab-btn" data-tab="academics">
+          <i class="fas fa-graduation-cap"></i> Academics
+        </button>
+        <button class="tab-btn" data-tab="contact">
+          <i class="fas fa-envelope"></i> Contact
+        </button>
+      </nav>
+
+      <div class="tab-content active" id="profile">
+        <section class="rpg-section">
+          <h2><i class="fas fa-scroll"></i> About Me</h2>
+          <div class="rpg-card">
+            <p>Hello! I'm Rushikesh Rahul Chavhan, a passionate technologist with a strong interest in both Computer Science and Electronics & Telecommunication Engineering. I am driven by the endless possibilities of combining software and hardware to create innovative solutions.</p>
+            <p>With a focus on programming, problem-solving, and user experience design, I’m dedicated to enhancing my skills across various areas like AR/VR, robotics, and gamification. I love working on projects that bridge the gap between technology and real-world applications, whether it's designing embedded systems, developing interactive AR experiences, or creating platforms that make learning engaging and fun.</p>
+            <p>I believe in continuous learning and thrive in interdisciplinary environments, always seeking to apply my knowledge in creative and impactful ways.</p>
+            <div class="rpg-grid">
+              <div class="stat-card">
+                <h3><i class="fas fa-bullseye"></i> Focus Areas</h3>
+                <ul>
+                  <li>AR/VR Development</li>
+                  <li>Robotics & Automation</li>
+                  <li>Gamified Learning Platforms</li>
+                  <li>Embedded Systems</li>
+                </ul>
+              </div>
+              
+              <div class="stat-card">
+                <h3><i class="fas fa-lightbulb"></i> Philosophy</h3>
+                <p>"Learn by doing. Grow by building. Inspire by sharing."</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-content" id="stats" style="display: none;">
+        <iframe src="stats.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      </div>
+
+      <div class="tab-content" id="skills" style="display: none;">
+        <iframe src="sections/skills.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      </div>
+
+      <div class="tab-content" id="projects" style="display: none;">
+        <iframe src="sections/projects.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      </div>
+
+      <div class="tab-content" id="academics" style="display: none;">
+        <section class="rpg-section">
+          <h2><i class="fas fa-graduation-cap"></i> Academic Background</h2>
+          
+          <div class="rpg-card">
+            <h3><i class="fas fa-university"></i> Education</h3>
+            <ul>
+              <li>MIT Academy of Engineering, Pune - B.Tech ENTC (Pursuing)</li>
+              <li>IIT Madras - BS in Data Science and Applications (Pursuing)</li>
+            </ul>
+            
+            <h3><i class="fas fa-trophy"></i> Achievements</h3>
+            <ul>
+              <li>2 Gold Medals - NSO (National Science Olympiad)</li>
+              <li>1 Silver Medal - IMO (International Mathematics Olympiad)</li>
+              <li>Participated in Homi Bhabha Exams</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-content" id="contact" style="display: none;">
+        <section class="rpg-section">
+          <h2><i class="fas fa-envelope"></i> Contact</h2>
+          
+          <div class="contact-info">
+            <ul>
+              <li>
+                <div id="contact-links">
+                  <form action="https://formspree.io/f/{your_form_id}" method="POST" class="contact-form"> <!-- Update with your Formspree ID -->
+                    <label for="visitor-name">Your Name:</label>
+                    <input type="text" id="visitor-name" name="visitor-name" required>
+                    
+                    <label for="visitor-email">Your Email:</label>
+                    <input type="email" id="visitor-email" name="visitor-email" required>
+                    
+                    <label for="visitor-message">Your Message:</label>
+                    <textarea id="visitor-message" name="visitor-message" required></textarea>
+                    
+                    <input type="submit" value="Send Message">
+                  </form>
+                </div>
+              </li>
+            </ul>
+            <div class="social-links">
+              <a href="mailto:rushichavhan143@gmail.com" target="_blank">
+                  <i class="fas fa-envelope social-icon"></i>
+              </a>
+              <a href="https://github.com/The-Rushi" target="_blank">
+                  <i class="fab fa-github social-icon"></i>
+              </a>
+              <a href="https://t.me/TheDevilImmortal" target="_blank">
+                  <i class="fab fa-telegram-plane social-icon"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/rushikesh-chavhan-a38b63311/" target="_blank">
+                  <i class="fab fa-linkedin social-icon"></i> <!-- Added LinkedIn icon -->
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="rpg-footer">
+    <p>© 2025 Rushikesh Chavhan | RPG Portfolio</p>
+  </footer>
+
+  <script src="tab-navigation.js"></script>
+</body>
+</html>

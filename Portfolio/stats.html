@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Attributes Radar Chart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background-color: #1e1e1e; /* Dark background */
+      color: #eee; /* Light text color */
+      font-family: 'Arial', sans-serif; /* Font style */
+      margin: 0;
+      padding: 20px;
+    }
+    .radar-chart-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+    .radar-chart {
+      width: 40%; /* Adjust width for the radar chart to make it smaller */
+      max-height: 400px; /* Set a maximum height to prevent scrolling */
+    }
+    .parameters-table {
+      width: 40%; /* Adjust width for the parameters table */
+      background-color: #2a2a2a; /* Dark background */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px; /* Padding */
+      color: #eee; /* Light text color */
+      margin-left: 20px; /* Add margin for spacing */
+    }
+    .parameters-table table {
+      width: 100%; /* Full width for the table */
+      border-collapse: collapse; /* Collapse borders */
+    }
+    .parameters-table th, .parameters-table td {
+      padding: 8px; /* Padding for table cells */
+      text-align: left; /* Left align text */
+    }
+    .parameters-table th {
+      background-color: #444; /* Darker background for header */
+    }
+  </style>
+</head>
+<body>
+  <h1>Professional Attributes Radar Chart</h1>
+  <div class="radar-chart-container">
+    <div class="radar-chart">
+      <canvas id="radarChart"></canvas>
+    </div>
+    <div class="parameters-table">
+      <h3>Professional Attributes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Problem Solving</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>Technical Knowledge</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>Creativity</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <td>Adaptability</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>Communication</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>Teamwork</td>
+            <td>65</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    const radarChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Problem Solving', 'Technical Knowledge', 'Creativity', 'Adaptability', 'Communication', 'Teamwork'],
+        datasets: [{
+          label: 'Professional Attributes',
+          data: [75, 55, 80, 70, 35, 65],
+          backgroundColor: 'rgba(212, 175, 55, 0.5)',
+          borderColor: 'rgba(212, 175, 55, 1)',
+          borderWidth: 2,
+          fill: true, // Fill the area under the line
+        }]
+      },
+      options: {
+        scales: {
+          r: {
+            beginAtZero: true,
+            ticks: {
+              display: false, // Hide the ticks
+              stepSize: 10,
+              max: 120, // Set max value to 120
+            },
+            grid: {
+              color: '#444', // Color for the grid lines
+              lineWidth: 1, // Width of the grid lines
+            }
+          }
+        },
+        elements: {
+          line: {
+            tension: 0 // Connect points with straight lines
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

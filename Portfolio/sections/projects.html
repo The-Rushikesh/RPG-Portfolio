@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects Section</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Cinzel', 'Times New Roman', serif;
+      background-color: #1e1e1e;
+      color: #eee;
+      margin: 0;
+      padding: 1rem;
+    }
+    .project-category {
+      border: 1px solid #444;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+    }
+    .project-category h3 {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.25rem;
+      color: #d4af37; /* Updated color for project headers */
+    }
+    .category-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1rem;
+      background-color: #222;
+    }
+    .project-category.active .category-content {
+      max-height: 2000px;
+      padding: 1rem;
+    }
+    .project-item {
+      border-top: 1px solid #444;
+      padding: 0.5rem 0;
+    }
+    .project-header {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #f0a500;
+    }
+    .project-description {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-left: 1rem;
+      color: #e0c9a6;
+    }
+    .project-item.active .project-description {
+      max-height: 500px;
+      padding-top: 0.5rem;
+    }
+    .project-header i {
+      transition: transform 0.3s ease;
+    }
+    .project-item.active .project-header i {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <section class="rpg-section">
+    <div class="project-tree">
+      <div class="project-category">
+        <h3>Current Projects <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">Mapping Robot (ENTC Course Project) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>An autonomous robot designed to map physical spaces using obstacle detection sensors. Developed as part of coursework, this project explores real-time data processing, pathfinding logic, and environmental mapping using microcontrollers and IR/ultrasonic sensors.</p>
+              <p><strong>Tools Used:</strong> Arduino Uno, HC-SR04, IR sensors, motor driver</p>
+              <p><strong>Learning Outcomes:</strong> Embedded systems, sensor integration, ENTC applications</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">AR Jenga Game (Augmented Reality Project) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>An interactive Jenga game developed using AR technology, enabling users to digitally play the classic game through an augmented interface. Focus is placed on real-world interaction and Unity development.</p>
+              <p><strong>Tools Used:</strong> Unity, Vuforia, C#</p>
+              <p><strong>Skills Gained:</strong> AR Development, 3D interaction design, debugging in Unity</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Questify – Gamified Doubt Solving Platform <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>Questify is a creative doubt-solving platform inspired by RPG mechanics. It includes XP progression, class-based systems, and stylized UI for learning gamification.</p>
+              <p><strong>Features:</strong> Subject-based classes, XP bars, class merging, quest sidebar</p>
+              <p><strong>Skills Gained:</strong> UI/UX Design, wireframing, frontend logic planning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-category">
+        <h3>Old Projects <i class="fas fa-chevron-down"></i></h3>
+        <div class="category-content">
+          <div class="project-item">
+            <div class="project-header">Smart Blind Stick with Obstacle Detection <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>A mobility aid for visually impaired individuals that alerts users of nearby obstacles through vibration and sound.</p>
+              <p><strong>Tools Used:</strong> IC 555, Buzzer, IR Sensor, Breadboard</p>
+              <p><strong>Skills Gained:</strong> Circuit design, hardware interfacing, problem-solving</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header">Library Management App (Design Thinking Project) <i class="fas fa-chevron-down"></i></div>
+            <div class="project-description">
+              <p>An Android app prototype designed for library resource management and user interaction, featuring book availability, return tracking, and PRN-based login.</p>
+              <p><strong>Developed In:</strong> Android Studio</p>
+              <p><strong>Core Features:</strong> Book availability & location, Issue/return tracking, Personalized book recommendations</p>
+              <p><strong>Role:</strong> Frontend development, UI design, team collaboration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="projects-accordion.js"></script>
+</body>
+</html>
